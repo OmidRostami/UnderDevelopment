@@ -45,19 +45,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-           
         }
         
         .container {
             display: flex;
             flex-direction: column;
             text-align: center;
+            align-items: center; /* THIS centers children horizontally */
+
             gap: 10px;
             margin: 10px;
         }
         
         .container h1 {
             font-size: 2rem;
+        }
+
+        .container img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .no-interact {
+            pointer-events: none;    /* Disable all pointer interaction */
+            user-select: none;       /* Prevent selection */
+            -webkit-user-drag: none; /* Prevent dragging in Safari */
         }
         
         .emoji {
@@ -72,7 +84,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="emoji">🚧</div>
+        <img src="assets/Images/ConstructionEmoji.png" class="no-interact" alt="Construction Emoji">
         <h1>Website Under Development</h1>
         <p>We are working hard to bring something awesome.</p>
         <h1>Stay tuned!</h1>
